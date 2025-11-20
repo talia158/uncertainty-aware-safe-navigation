@@ -12,6 +12,8 @@ RUN apt-get update && apt-get install -y \
     tigervnc-standalone-server \
     xterm \
     x11-apps \
+    xfce4 \
+    xfce4-terminal \
     python3-pip \
     && rm -rf /var/lib/apt/lists/*
 

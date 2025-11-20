@@ -17,7 +17,7 @@ fi
 # Start VNC server on display :1
 /usr/bin/vncserver :1 -geometry 1920x1080 -depth 24 \
   -localhost no \
-  -xstartup /usr/bin/xterm
+  -xstartup /usr/bin/startxfce4
 
 echo "VNC server started on :1 (port 5901). Password is 'ros2'."
 
