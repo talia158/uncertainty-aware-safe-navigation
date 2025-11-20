@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  safe_nav:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: safe_nav
+    # Force amd64 architecture for ROS images on Mac (especially Apple Silicon)
+    platform: linux/amd64
+    volumes:
+      - ../ros2_ws:/root/ros2_ws
+    ports:
+      - "5901:5901"   # VNC port (display :1 -> 5901)
+    environment:
+      - USER=root
+    stdin_open: true
+    tty: true
+
